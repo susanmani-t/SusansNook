@@ -5,15 +5,78 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#848871"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!-- Rounded Rectangle Image -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/randomImage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="User image"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+    <!-- Edit Button (Add/Delete) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnEditPics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:foregroundTint="#B9F6CA"
+        android:src="@android:drawable/ic_menu_edit"
+        android:tint="#B9F6CA"
+        app:backgroundTint="#464b37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/randomImage"
+        app:rippleColor="#B9F6CA" />
+
+    <!-- Inspirational Quote -->
+    <TextView
+        android:id="@+id/quoteText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:text="Daily inspirational quote here"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/randomImage" />
+
+    <!-- Diary and Games Buttons (Circular ImageButtons) -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnDiary"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/diary_icon"
+            app:shapeAppearanceOverlay="@style/CircleShape" />
+
+        <ImageButton
+            android:id="@+id/btnGames"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="36dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/games_icon"
+            app:shapeAppearanceOverlay="@style/CircleShape" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

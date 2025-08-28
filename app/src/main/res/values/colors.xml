@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Your new color palette -->
+    <color name="background_color">#848871</color>
+    <color name="primary_color">#464b37</color>
+    <color name="primary_dark">#262b15</color>
+    <color name="accent_color">#464b37</color>
+
+    <!-- Secondary colors from palette -->
+    <color name="surface_color">#afb4ad</color>
+    <color name="dark_surface">#3f3f3f</color>
+    <color name="image_placeholder">#afb4ad</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#262b15</color>
+    <color name="text_secondary">#3f3f3f</color>
+
+    <!-- Status colors -->
+    <color name="error_color">#F44336</color>
+    <color name="success_color">#4CAF50</color>
+
+    <!-- Basic colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
 </resources>
