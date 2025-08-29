@@ -44,7 +44,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Delete entry"
                 android:src="@drawable/ic_delete"
-                android:tint="@color/error_color" />
+                app:tint="@color/error_color" />
 
         </LinearLayout>
 

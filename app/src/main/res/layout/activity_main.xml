@@ -8,6 +8,86 @@
     android:background="#848871"
     tools:context=".MainActivity">
 
+
+    <!-- Add this section to your existing activity_main.xml, in the empty space area -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/todoCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#464b37"
+        app:layout_constraintTop_toBottomOf="@id/quoteText"
+        app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Tasks"
+                android:textColor="#afb4ad"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Add todo input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/editTodo"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Add a task..."
+                    android:background="@drawable/edit_text_background"
+                    android:padding="12dp"
+                    android:textColor="#afb4ad"
+                    android:textColorHint="#848871"
+                    android:textSize="16sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageButton
+                    android:id="@+id/btnAddTodo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_button_background"
+                    android:contentDescription="Add todo"
+                    android:src="@drawable/ic_add"
+                    app:tint="#afb4ad" />
+
+            </LinearLayout>
+
+            <!-- Todo RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/todoRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
     <!-- Rounded Rectangle Image -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/randomImage"
